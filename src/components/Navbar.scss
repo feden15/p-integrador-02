@@ -1,0 +1,41 @@
+/* ----------------------------------------------- */
+/* NAVBAR                                          */
+/* ----------------------------------------------- */
+
+.nav-bar {
+    display: none; /* se oculta el menú */
+
+    &__nav-list { /* .nav-bar__nav-list */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        list-style-type: none;
+
+        @media screen and (min-width: 992px) {
+            & {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__nav-item { /* .nav-bar__nav-item */
+        text-align: center;
+        background-color: pink;
+        width: 100%;
+    }
+
+    &__nav-link {
+        display: block;
+        padding: 1rem 2rem;
+        color: #bfa2bd;
+        font-weight: bold;
+        background-color: #fefefe;
+    }
+
+    @media screen and (min-width: 992px) {
+        & {
+            display: block; /* muestra el menú */
+            order: 1;
+        }
+    }
+}
