@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: .5px solid red;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%; // default navegadores 16px
+
+
+    background-image: url(imgs/logoLunarteCompleto.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: space;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: (rgba(192, 149, 202, 0.4));
+    z-index: -1;
+}
+
+// footer {
+//     font-size: 1.5rem;
+//     margin-top: 20px;
+//     text-align: center;
+
+//     background-color: rgb(0, 0, 0, 0.4);
+//     color: #fefefe;
+// }
