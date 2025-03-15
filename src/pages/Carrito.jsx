@@ -1,3 +1,4 @@
+import ListadoCarrito from "../components/ListadoCarrito"
 import useTitulo from "../hooks/useTitulo"
 
 const Carrito = () => {
@@ -5,7 +6,11 @@ const Carrito = () => {
   useTitulo('Carrito')
 
   return (
-    <div>Carrito</div>
+    <>
+      <h1>Productos del carrito</h1>
+      <hr />
+      <ListadoCarrito />
+    </>
   )
 }
 
