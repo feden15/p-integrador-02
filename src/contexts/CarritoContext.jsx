@@ -36,9 +36,8 @@ const CarritoProvider = ({ children }) => {
 
   const data = {
     carrito,
-    elProductoEstaEnElCarrito,
-    obtenerProductoDeCarrito,
-    agregarProductoAlCarritoContext
+    agregarProductoAlCarritoContext,
+    limpiarCarrito
   }
 
   return <CarritoContext.Provider value={data}>{children}</CarritoContext.Provider>

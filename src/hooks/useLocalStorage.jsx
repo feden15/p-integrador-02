@@ -6,7 +6,7 @@ export const useLocalStorage = ( clave, valorInicial = [] ) => {
 
         try {
             const valorAlmacenado = window.localStorage.getItem(clave)
-            return valorAlmacenado ? JSON.stringify(valorAlmacenado) : valorInicial
+            return valorAlmacenado ? JSON.parse(valorAlmacenado) : valorInicial
         } catch (error) {
             console.error(`Error al obtener ${clave} del localStorage ${error}`);
             return valorInicial
@@ -14,7 +14,7 @@ export const useLocalStorage = ( clave, valorInicial = [] ) => {
 
     }
 
-    const [valorAlmacenado, setValorAlmacenado] = useState(getValorAlmacenado())
+    const [valorAlmacenado, setValorAlmacenado] = useState(() => getValoralmacenado());
 
     const guardarValor = (valorNuevo) => {
 
