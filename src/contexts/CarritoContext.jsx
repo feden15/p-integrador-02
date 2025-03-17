@@ -5,7 +5,7 @@ const CarritoContext = createContext()
 
 const CarritoProvider = ({ children }) => {
 
-  const [agregarAlCarrito, eliminarDelCarrito, limpiarCarrito, carrito] = useLocalStorage('carrito', [])
+  const [carrito, agregarAlCarrito, eliminarDelCarrito, limpiarCarrito] = useLocalStorage("carrito", [])
 
   function elProductoEstaEnElCarrito(producto) {
 
@@ -36,8 +36,9 @@ const CarritoProvider = ({ children }) => {
 
   const data = {
     carrito,
-    agregarProductoAlCarritoContext,
-    limpiarCarrito
+    agregarProductoAlCarritoContext: agregarAlCarrito,
+    limpiarCarrito,
+    eliminarDelCarrito
   }
 
   return <CarritoContext.Provider value={data}>{children}</CarritoContext.Provider>

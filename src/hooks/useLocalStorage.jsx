@@ -18,13 +18,11 @@ export const useLocalStorage = ( clave, valorInicial = [] ) => {
 
     const guardarValor = (valorNuevo) => {
 
-        try {
-            const nuevoValorAlmacenado = [...valorAlmacenado, valorNuevo]
-            setValorAlmacenado(nuevoValorAlmacenado)
+        setValorAlmacenado(anterior => {
+            const nuevoValorAlmacenado = [...anterior, valorNuevo]
             window.localStorage.setItem(clave, JSON.stringify(nuevoValorAlmacenado))
-        } catch (error) {
-            console.error(`Error al guardar ${clave} del localStorage ${error}`);
-        }
+            return nuevoValorAlmacenado
+        })
 
     }
 
@@ -44,11 +42,10 @@ export const useLocalStorage = ( clave, valorInicial = [] ) => {
 
     const limpiarValores = () => {
 
-        window.localStorage.clear()
-        window.localStorage.setItem(clave, JSON.stringifya(valorInicial))
+        window.localStorage.removeItem(clave)
         setValorAlmacenado(valorInicial)
-
+    
     }
 
-    return [guardarValor, eliminarValor, limpiarValores, valorAlmacenado]
+    return [valorAlmacenado, guardarValor, eliminarValor, limpiarValores]
 }

@@ -8,7 +8,9 @@ const ListadoCarrito = () => {
     const { carrito } = useContext(CarritoContext)
 
     const handleComprar = () => {
-        agregarProductoAlCarritoContext()
+        // simulo que compré lo del carrito
+        console.log("Compra realizada con éxito")
+        limpiarCarrito()
     }
 
     const handleLimpiarCarrito = () => {
@@ -28,7 +30,7 @@ const ListadoCarrito = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     {
                         carrito.length <= 0 ? (
                             <tr>
@@ -36,7 +38,7 @@ const ListadoCarrito = () => {
                             </tr>
                         ) : (
                             carrito.map((producto, idx) => (
-                                <ItemCarrito key={idx} producto={producto} />
+                                <ItemCarrito key={producto.id} producto={producto} />
                             ))
                         )
                     }
@@ -44,7 +46,7 @@ const ListadoCarrito = () => {
                 </tbody>
             </table>
             <hr />
-            {!carrito.length <= 0 && (
+            {carrito.length < 0 && (
                 <>
                     <button onClick={handleLimpiarCarrito}>Vaciar Carrito</button>
                     <button onClick={handleComprar}>Comprar</button>
