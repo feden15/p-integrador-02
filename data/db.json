@@ -4,61 +4,61 @@
             "id": 1,
             "nombre": "Alhajero",
             "foto": "imgs/alhajero.webp",
-            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya. Elaborado artesanalmente con cerámica y yeso, combinando funcionalidad y estética"
+            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya."
         },
         {
             "id": 2,
             "nombre": "Estrella de mar",
             "foto": "imgs/estrella-mar.webp",
-            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina, elaborada con cerámica y yeso, ideal para adornar espacios con un estilo náutico."
+            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina."
         },
         {
             "id": 3,
             "nombre": "Huevera",
             "foto": "imgs/huevera.webp",
-            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos, elaborado con cerámica y yeso, combinando funcionalidad y estética en la cocina o decoración."
+            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos."
         },
         {
             "id": 4,
             "nombre": "Porta vasos",
             "foto": "imgs/porta-vasos.webp",
-            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, elaborado artesanalmente con cerámica y yeso, aportando estilo y originalidad a cualquier espacio."
+            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, aportando estilo y originalidad a cualquier espacio."
         },
         {
             "id": 5,
             "nombre": "Alhajero",
             "foto": "imgs/alhajero.webp",
-            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya. Elaborado artesanalmente con cerámica y yeso, combinando funcionalidad y estética"
+            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya."
         },
         {
             "id": 6,
             "nombre": "Estrella de mar",
             "foto": "imgs/estrella-mar.webp",
-            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina, elaborada con cerámica y yeso, ideal para adornar espacios con un estilo náutico."
+            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina."
         },
         {
             "id": 7,
             "nombre": "Huevera",
             "foto": "imgs/huevera.webp",
-            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos, elaborado con cerámica y yeso, combinando funcionalidad y estética en la cocina o decoración."
+            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos."
         },
         {
             "id": 8,
             "nombre": "Porta vasos",
             "foto": "imgs/porta-vasos.webp",
-            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, elaborado artesanalmente con cerámica y yeso, aportando estilo y originalidad a cualquier espacio."
+            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, aportando estilo y originalidad a cualquier espacio."
         },
         {
             "id": 9,
-            "nombre": "Huevera",
-            "foto": "imgs/huevera.webp",
-            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos, elaborado con cerámica y yeso, combinando funcionalidad y estética en la cocina o decoración."
+            "nombre": "Alhajero",
+            "foto": "imgs/alhajero.webp",
+            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya."
         },
         {
             "id": 10,
-            "nombre": "Porta vasos",
-            "foto": "imgs/porta-vasos.webp",
-            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, elaborado artesanalmente con cerámica y yeso, aportando estilo y originalidad a cualquier espacio."
+            "nombre": "Estrella de mar",
+            "foto": "imgs/estrella-mar.webp",
+            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina."
         }
     ]
 }

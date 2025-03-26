@@ -6,8 +6,8 @@ const ItemCarrito = ({producto}) => {
 
     const { eliminarProductoDelCarritoContext } = useContext(CarritoContext)
 
-    const handleEliminar = (id) => {
-        eliminarProductoDelCarritoContext(id)
+    const handleEliminar = (producto) => {
+        eliminarProductoDelCarritoContext(producto)
     }
 
   return (
@@ -19,7 +19,7 @@ const ItemCarrito = ({producto}) => {
         <td>{producto.cantidad}</td>
         <td>{producto.precio}</td>
         <td>
-            <button onClick={() => handleEliminar(producto.id)}>Eliminar</button>
+            <button onClick={() => handleEliminar(producto)}>Eliminar</button>
         </td>
     </tr>
   )

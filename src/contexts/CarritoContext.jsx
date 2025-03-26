@@ -34,11 +34,18 @@ const CarritoProvider = ({ children }) => {
 
   }
 
+  const eliminarProductoDelCarritoContext = (producto) => {
+    if (elProductoEstaEnElCarrito(producto)) {
+      producto.cantidad++
+      eliminarDelCarrito(producto)
+    }
+  }
+
   const data = {
     carrito,
     agregarProductoAlCarritoContext: agregarAlCarrito,
     limpiarCarrito,
-    eliminarDelCarrito
+    eliminarProductoDelCarritoContext
   }
 
   return <CarritoContext.Provider value={data}>{children}</CarritoContext.Provider>
