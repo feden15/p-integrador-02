@@ -1,11 +1,48 @@
+import { useContext, useEffect } from "react"
+import ProductosContext from "../../contexts/ProductosContext"
 
 const Formulario = () => {
+
+    const {
+        crearProductoContext,
+        productoAEditar,
+        setProductoAEditar,
+        actualizarProductocontext } = useContext(ProductosContext)
+
+    const formInicial = {
+        id: null,
+        nombre: '',
+        precio: '',
+        stock: '',
+        marca: '',
+        categoria: '',
+        detalles: '',
+        foto: '',
+        envio: false
+    }
+
+    const [form, setForm] = useState(formInicial)
+
+    useEffect(() => { 
+      productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
+    }, [productoAEditar])
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        if (form.id  === null) {
+            crearProductoContext(form)
+        } else {
+            actualizarProductocontext(form)
+        }
+    }
 
     return (
         <>
             <h2>Agregar : Editar</h2>
 
-            <form>
+            <form onSubmit={handleSubmit}>
+
                 <div>
                     <label htmlFor="lbl-nombre">Nombre</label>
                     <input
