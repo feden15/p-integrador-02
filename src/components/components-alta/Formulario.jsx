@@ -42,6 +42,11 @@ const Formulario = () => {
         setForm({ ...form, [name]: type === 'checkbox' ? checked : value })
     }
 
+    const handleReset = () => {
+        setForm(formInicial)
+        setProductoAEditar(null)
+    }
+
 
     return (
         <>
@@ -123,7 +128,7 @@ const Formulario = () => {
                 </div>
 
                 <button type="submit">Guardar : Editar</button>
-                <button type="reset">Limpiar</button>
+                <button type="reset" onClick={handleReset}>Limpiar</button>
 
             </form>
         </>
