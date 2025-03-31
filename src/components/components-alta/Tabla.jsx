@@ -28,15 +28,11 @@ const Tabla = () => {
 
       <tbody>
 
-        <tr>
-          <td>
-            {
-              productos && productos.map((producto) => (
-                <TablaFila producto={producto} key={producto.id} />
-              ))
-            }
-          </td>
-        </tr>
+        {
+          productos && productos.map((producto) => (
+            <TablaFila producto={producto} key={producto.id} />
+          ))
+        }
 
       </tbody>
 
