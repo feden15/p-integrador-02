@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
 
 const Formulario = () => {
@@ -46,7 +46,6 @@ const Formulario = () => {
         setForm(formInicial)
         setProductoAEditar(null)
     }
-
 
     return (
         <>
