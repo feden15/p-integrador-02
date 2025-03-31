@@ -99,6 +99,7 @@ const ProductosProvider = ( { children } ) => {
 
     const data = {
         productos,
+        productoAEditar,
         crearProductoContext,
         actualizarProductoContext,
         eliminarProductoContext
