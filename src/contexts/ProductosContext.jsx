@@ -31,7 +31,7 @@ const ProductosProvider = ( { children } ) => {
 
         try {
 
-            delete productoNuevo.id
+            delete productoNuevo.id // no nos sirve el ID que trae porque el Back crea uno nuevo
 
             const options = {
                 method: 'POST',
@@ -47,6 +47,30 @@ const ProductosProvider = ( { children } ) => {
             
         } catch (error) {
             console.errlr('[crearProductoContext]', error);            
+        }
+
+    }
+
+    const actualizarProductoContext = async (productoAEditar) => {
+        
+        try {
+
+            const options = {
+                method: 'PUT',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(productoAEditar)
+            }
+
+            const urlActualizar = url + productoAEditar.id
+
+            const productoEditado = await peticionesHttp(urlActualizar, options)
+
+            const nuevoEstadoProductos = productos.map(prod => prod.id === productoEditado.id ? productoEditado : prod)
+
+            setProductos(nuevoEstadoProductos)
+            
+        } catch (error) {
+            console.error('[actualizarProductoContext]', error)
         }
 
     }
