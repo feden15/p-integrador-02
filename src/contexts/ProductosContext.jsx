@@ -27,8 +27,33 @@ const ProductosProvider = ( { children } ) => {
         }
     }
 
+    const crearProductoContext = async (productoNuevo) => {
+
+        try {
+
+            delete productoNuevo.id
+
+            const options = {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(productoNuevo)
+            }
+
+            const prods = await peticionesHttp(url, options)
+
+            const nuevoEstadoProductos = [...productos, prods]
+
+            setProductos(nuevoEstadoProductos)
+            
+        } catch (error) {
+            console.errlr('[crearProductoContext]', error);            
+        }
+
+    }
+
     const data = {
         productos,
+        crearProductoContext
     }
 
     return <ProductosContext.Provider value={data}> {children} </ProductosContext.Provider>
