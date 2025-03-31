@@ -7,7 +7,7 @@ const Formulario = () => {
         crearProductoContext,
         productoAEditar,
         setProductoAEditar,
-        actualizarProductocontext } = useContext(ProductosContext)
+        actualizarProductoContext } = useContext(ProductosContext)
 
     const formInicial = {
         id: null,
@@ -33,8 +33,10 @@ const Formulario = () => {
         if (form.id === null) {
             crearProductoContext(form)
         } else {
-            actualizarProductocontext(form)
+            actualizarProductoContext(form)
         }
+
+        handleReset()
     }
 
     const handleChange = (e) => {
@@ -49,7 +51,7 @@ const Formulario = () => {
 
     return (
         <>
-            <h2>Agregar : Editar</h2>
+            <h2>{form.id === null ? 'Agregar' : 'Editar'}</h2>
 
             <form onSubmit={handleSubmit}>
 

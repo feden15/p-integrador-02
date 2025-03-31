@@ -85,7 +85,7 @@ const ProductosProvider = ( { children } ) => {
             
             const urlEliminacion = url + id
 
-            // const prodEliminado = await peticionesHttp(urlEliminacion, options)
+            const prodEliminado = await peticionesHttp(urlEliminacion, options)
 
             const nuevoEstadoProductos = productos.filter(prod => prod.id !== id)
 
@@ -100,6 +100,7 @@ const ProductosProvider = ( { children } ) => {
     const data = {
         productos,
         productoAEditar,
+        setProductoAEditar,
         crearProductoContext,
         actualizarProductoContext,
         eliminarProductoContext

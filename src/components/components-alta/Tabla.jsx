@@ -1,14 +1,14 @@
 import { useContext } from "react"
 import TablaFila from "./TablaFila"
 import ProductosContext from "../../contexts/ProductosContext"
-
+import './Tabla.scss'
 
 const Tabla = () => {
 
   const { productos } = useContext(ProductosContext)
 
   return (
-    <table>
+    <table className="tabla-alta">
 
       <thead>
 

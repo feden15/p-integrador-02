@@ -1,64 +1,114 @@
 {
-    "productos": [
-        {
-            "id": 1,
-            "nombre": "Alhajero",
-            "foto": "imgs/alhajero.webp",
-            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya."
-        },
-        {
-            "id": 2,
-            "nombre": "Estrella de mar",
-            "foto": "imgs/estrella-mar.webp",
-            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina."
-        },
-        {
-            "id": 3,
-            "nombre": "Huevera",
-            "foto": "imgs/huevera.webp",
-            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos."
-        },
-        {
-            "id": 4,
-            "nombre": "Porta vasos",
-            "foto": "imgs/porta-vasos.webp",
-            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, aportando estilo y originalidad a cualquier espacio."
-        },
-        {
-            "id": 5,
-            "nombre": "Alhajero",
-            "foto": "imgs/alhajero.webp",
-            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya."
-        },
-        {
-            "id": 6,
-            "nombre": "Estrella de mar",
-            "foto": "imgs/estrella-mar.webp",
-            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina."
-        },
-        {
-            "id": 7,
-            "nombre": "Huevera",
-            "foto": "imgs/huevera.webp",
-            "descripcion": "La clásica huevera, un utensilio artesanal diseñado para sostener y organizar huevos."
-        },
-        {
-            "id": 8,
-            "nombre": "Porta vasos",
-            "foto": "imgs/porta-vasos.webp",
-            "descripcion": "Decorativo y funcional, diseñado para proteger superficies, aportando estilo y originalidad a cualquier espacio."
-        },
-        {
-            "id": 9,
-            "nombre": "Alhajero",
-            "foto": "imgs/alhajero.webp",
-            "descripcion": "Alhajero decorativo pequeño, ideal para guardar, caravanas, anillos o cualquier joya."
-        },
-        {
-            "id": 10,
-            "nombre": "Estrella de mar",
-            "foto": "imgs/estrella-mar.webp",
-            "descripcion": "Nuestra estrella de mar es una figura decorativa artesanal, inspirada en la naturaleza marina."
-        }
-    ]
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Alhajero",
+      "precio": "100",
+      "stock": "32",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/alhajero.webp",
+      "envio": true
+    },
+    {
+      "id": "2",
+      "nombre": "Estrella de mar",
+      "precio": "150",
+      "stock": "25",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/estrella-mar.webp",
+      "envio": true
+    },
+    {
+      "id": "3",
+      "nombre": "Huevera",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/huevera.webp",
+      "envio": false
+    },
+    {
+      "id": "4",
+      "nombre": "Porta vasos",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/porta-vasos.webp",
+      "envio": false
+    },
+    {
+      "id": "5",
+      "nombre": "Alhajero",
+      "precio": "100",
+      "stock": "32",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/alhajero.webp",
+      "envio": true
+    },
+    {
+      "id": "6",
+      "nombre": "Estrella de mar",
+      "precio": "150",
+      "stock": "25",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/estrella-mar.webp",
+      "envio": false
+    },
+    {
+      "id": "7",
+      "nombre": "Huevera",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/huevera.webp",
+      "envio": true
+    },
+    {
+      "id": "8",
+      "nombre": "Porta vasos",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/porta-vasos.webp",
+      "envio": false
+    },
+    {
+      "id": "9",
+      "nombre": "Huevera",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/huevera.webp",
+      "envio": true
+    },
+    {
+      "id": "10",
+      "nombre": "Porta vasos",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "-",
+      "foto": "imgs/porta-vasos.webp",
+      "envio": false
+    }
+  ]
 }
