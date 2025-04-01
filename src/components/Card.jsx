@@ -4,10 +4,9 @@ import CarritoContext from '../contexts/CarritoContext'
 
 const Card = ({ producto }) => {
 
-  const { agregarProductoAlCarritoContext, elProductoEstaEnElCarrito } = useContext(CarritoContext)
+  const { agregarProductoAlCarritoContext } = useContext(CarritoContext)
 
   const handleAgregar = (producto) => {
-    debugger
     agregarProductoAlCarritoContext(producto)
   }
 
