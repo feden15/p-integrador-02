@@ -35,21 +35,48 @@ const CarritoProvider = ({ children }) => {
   }
 
   const eliminarProductoDelCarritoContext = (producto) => {
-    if (elProductoEstaEnElCarrito(producto)) {
-      producto.cantidad++
-      eliminarDelCarrito(producto)
+    // producto.cantidad++
+    eliminarDelCarrito(producto.id)
+  }
+
+  const limpiarCarritoContext = () => {
+    limpiarCarrito()
+  }
+
+  const guardarCarritoBackendContext = async () => {
+
+    try {
+
+      const dataCarrito = {
+        createAt: Date.now(),
+        cantidad: carrito.length,
+        carrito
+      }
+
+      const options = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(dataCarrito)
+      }
+
+      const carritoGuardado = await peticionesHttp(urlCarrito, options)
+
+      limpiarCarrito()
+
+    } catch (error) {
+      console.error('[guardarCarritoBackendContext]', error)
     }
   }
 
   const data = {
     carrito,
-    agregarProductoAlCarritoContext: agregarAlCarrito,
-    limpiarCarrito,
-    eliminarProductoDelCarritoContext
+    agregarProductoAlCarritoContext,
+    eliminarProductoDelCarritoContext,
+    limpiarCarritoContext,
+    guardarCarritoBackendContext
   }
 
   return <CarritoContext.Provider value={data}>{children}</CarritoContext.Provider>
-
 }
 
 export { CarritoProvider }
