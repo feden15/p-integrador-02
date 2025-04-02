@@ -7,7 +7,7 @@
       "stock": "32",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Pequeño recipiente decorativo de yeso y cerámica, ideal para guardar joyas y accesorios con estilo elegante y artesanal.",
       "foto": "imgs/alhajero.webp",
       "envio": true
     },
@@ -18,7 +18,7 @@
       "stock": "25",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Figura decorativa inspirada en el océano, hecha de yeso o cerámica, perfecta para ambientaciones marinas y colecciones.",
       "foto": "imgs/estrella-mar.webp",
       "envio": true
     },
@@ -29,7 +29,7 @@
       "stock": "20",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Soporte funcional de cerámica o yeso diseñado para sostener huevos, ideal para desayunos y presentaciones de mesa.",
       "foto": "imgs/huevera.webp",
       "envio": false
     },
@@ -40,7 +40,7 @@
       "stock": "20",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Base protectora de cerámica o yeso, diseñada para sostener vasos y evitar marcas en las superficies.",
       "foto": "imgs/porta-vasos.webp",
       "envio": false
     },
@@ -51,7 +51,7 @@
       "stock": "32",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Pequeño recipiente decorativo de yeso y cerámica, ideal para guardar joyas y accesorios con estilo elegante y artesanal.",
       "foto": "imgs/alhajero.webp",
       "envio": true
     },
@@ -62,9 +62,9 @@
       "stock": "25",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Figura decorativa inspirada en el océano, hecha de yeso o cerámica, perfecta para ambientaciones marinas y colecciones.",
       "foto": "imgs/estrella-mar.webp",
-      "envio": false
+      "envio": true
     },
     {
       "id": "7",
@@ -73,9 +73,9 @@
       "stock": "20",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Soporte funcional de cerámica o yeso diseñado para sostener huevos, ideal para desayunos y presentaciones de mesa.",
       "foto": "imgs/huevera.webp",
-      "envio": true
+      "envio": false
     },
     {
       "id": "8",
@@ -84,29 +84,51 @@
       "stock": "20",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Base protectora de cerámica o yeso, diseñada para sostener vasos y evitar marcas en las superficies.",
       "foto": "imgs/porta-vasos.webp",
       "envio": false
     },
     {
       "id": "9",
+      "nombre": "Alhajero",
+      "precio": "100",
+      "stock": "32",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "Pequeño recipiente decorativo de yeso y cerámica, ideal para guardar joyas y accesorios con estilo elegante y artesanal.",
+      "foto": "imgs/alhajero.webp",
+      "envio": true
+    },
+    {
+      "id": "10",
+      "nombre": "Estrella de mar",
+      "precio": "150",
+      "stock": "25",
+      "marca": "Lunarte",
+      "categoria": "Decorativo",
+      "detalles": "Figura decorativa inspirada en el océano, hecha de yeso o cerámica, perfecta para ambientaciones marinas y colecciones.",
+      "foto": "imgs/estrella-mar.webp",
+      "envio": true
+    },
+    {
+      "id": "11",
       "nombre": "Huevera",
       "precio": "200",
       "stock": "20",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Soporte funcional de cerámica o yeso diseñado para sostener huevos, ideal para desayunos y presentaciones de mesa.",
       "foto": "imgs/huevera.webp",
-      "envio": true
+      "envio": false
     },
     {
-      "id": "10",
+      "id": "12",
       "nombre": "Porta vasos",
       "precio": "200",
       "stock": "20",
       "marca": "Lunarte",
       "categoria": "Decorativo",
-      "detalles": "-",
+      "detalles": "Base protectora de cerámica o yeso, diseñada para sostener vasos y evitar marcas en las superficies.",
       "foto": "imgs/porta-vasos.webp",
       "envio": false
     }

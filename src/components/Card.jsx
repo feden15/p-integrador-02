@@ -19,7 +19,7 @@ const Card = ({ producto }) => {
         <div className="card__content">
           <h2 className="card__heading">{producto.nombre}</h2>
           <div className="card__description">
-            <p>{producto.descripcion}</p>
+            <p>{producto.detalles}</p>
           </div>
           <button className='card__button' onClick={() => handleAgregar(producto)}>Agregar al carrito</button>
         </div>

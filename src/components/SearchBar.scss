@@ -12,6 +12,8 @@
 
         width: 10rem;
         height: 3.50rem;
+
+        filter: saturate(2);
     }
 
     &__form-container {
@@ -46,5 +48,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        filter: saturate(2);
     }
 }
