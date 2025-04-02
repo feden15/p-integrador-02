@@ -87,6 +87,10 @@ const ProductosProvider = ( { children } ) => {
 
             const prodEliminado = await peticionesHttp(urlEliminacion, options)
 
+            if (!prodEliminado) {
+                return;
+            }
+
             const nuevoEstadoProductos = productos.filter(prod => prod.id !== id)
 
             setProductos(nuevoEstadoProductos)

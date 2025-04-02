@@ -46,6 +46,11 @@ const ListadoCarrito = () => {
                     }
 
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total:</th>
+                    </tr>
+                </tfoot>
             </table>
             <hr />
             {carrito.length < 0 && (
