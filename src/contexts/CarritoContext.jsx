@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { peticionesHttp } from "../helpers/peticiones-http";
 
 const CarritoContext = createContext()
 
