@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
+import './TablaFila.scss'
 
 const TablaFila = ({ producto }) => {
 
@@ -17,8 +18,8 @@ const TablaFila = ({ producto }) => {
 
     <tr>
       <td>{producto.nombre}</td>
-      <td>{producto.precio}</td>
-      <td>{producto.stock}</td>
+      <td>${producto.precio}</td>
+      <td>{producto.stock} u.</td>
       <td>{producto.marca}</td>
       <td>{producto.categoria}</td>
       <td className="detalles-columna">{producto.detalles}</td>
@@ -27,9 +28,9 @@ const TablaFila = ({ producto }) => {
       </td>
       <td>{producto.envio ? '✅' : '❌'}</td>
       <td>
-        <button>Ver</button>
-        <button onClick={() => handleEditar(producto)}>Editar</button>
-        <button onClick={() => handleEliminar(producto.id)}>Borrar</button>
+        <button className="boton__ver">Ver</button>
+        <button className="boton_editar" onClick={() => handleEditar(producto)}>Editar</button>
+        <button className="boton_borrar" onClick={() => handleEliminar(producto.id)}>Borrar</button>
       </td>
     </tr>
 

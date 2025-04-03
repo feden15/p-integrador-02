@@ -10,15 +10,15 @@ table.tabla-alta {
 
     margin-top: 10px;
 
-    td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
-    }
-
     th {
         padding: 10px;
-        background-color: rgb(169, 169, 169, 0.4);
+        background-color: rgb(240, 199, 243);
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+
+    td {
+        padding: 10px;
         border-bottom: 1px solid #ddd;
         text-align: left;
     }

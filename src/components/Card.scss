@@ -23,7 +23,7 @@
         display: flex;
         height: 100%;
     }
-    
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -36,7 +36,7 @@
         width: 100%;
         height: 100%;
     }
-    
+
     &__image-container {
         width: 400px;
         height: 200px;
@@ -47,13 +47,14 @@
 
     &__heading {
         font-weight: bold;
+        text-decoration: underline;
         color: #eee;
         margin: 5px;
     }
 
     &__description {
         font-weight: bold;
-        color: #111;
+        color: #eee;
         margin: 5px;
     }
 
@@ -62,7 +63,7 @@
         width: max-content;
         color: #111;
         font-weight: bold;
-        background-color: rgb(169, 169, 169, 0.4);
+        background-color: rgb(223, 173, 228);
         margin-top: auto;
         border-radius: 5px;
         border: none;
@@ -70,11 +71,12 @@
     }
 
     &__button:hover {
-        background-color: grey;
+        background-color: rgb(107, 45, 112);
+        color: #eee;
     }
 
     @media screen and (min-width: 992px) {
-        
+
         & {
             width: 220px;
             max-width: 300px;
