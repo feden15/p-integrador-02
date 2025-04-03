@@ -1,20 +1,19 @@
 import { useContext } from "react"
-import CarritoContext from "../contexts/CarritoContext"
+import CarritoContext from "../../contexts/CarritoContext"
 import ItemCarrito from "./ItemCarrito"
 import './ListadoCarrito.scss'
 
 const ListadoCarrito = () => {
 
-    const { carrito } = useContext(CarritoContext)
+    const { carrito, limpiarCarritoContext, guardarCarritoBackendContext } = useContext(CarritoContext)
 
     const handleComprar = () => {
-        // simulo que compré lo del carrito
-        console.log("Compra realizada con éxito")
-        limpiarCarrito()
+        guardarCarritoBackendContext()
+        limpiarCarritoContext()
     }
 
     const handleLimpiarCarrito = () => {
-        limpiarCarrito()
+        limpiarCarritoContext()
     }
 
     const total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0)
@@ -27,7 +26,7 @@ const ListadoCarrito = () => {
                         <th>Foto</th>
                         <th>Nombre</th>
                         <th>Cantidad</th>
-                        <th>Precio</th>
+                        <th>Sub-total</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -46,21 +45,17 @@ const ListadoCarrito = () => {
                     }
 
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Total:</th>
-                    </tr>
-                </tfoot>
             </table>
-            <hr />
-            {carrito.length < 0 && (
-                <>
-                    <h3>Total a pagar: ${total.toFixed(2)}</h3>
-                    <button onClick={handleLimpiarCarrito}>Vaciar Carrito</button>
-                    <button onClick={handleComprar}>Comprar</button>
-                </>
-            )
-            }
+
+            {carrito.length > 0 && (
+                <div className="carrito-controls">
+                    <h3>Total a pagar: $ {total.toFixed(2)}</h3>
+                    <div className="botones-carrito">
+                        <button className="vaciar" onClick={handleLimpiarCarrito}>Vaciar Carrito</button>
+                        <button className="comprar" onClick={handleComprar}>Comprar</button>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

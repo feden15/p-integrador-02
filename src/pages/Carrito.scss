@@ -1,0 +1,27 @@
+// Carrito.scss
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
+
+.carrito-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    h1 {
+        font-family: "Charm", serif;
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: 5px;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin: 1rem 0;
+    }
+}

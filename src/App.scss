@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Charmonman:wght@400;700&family=DM+Serif+Text:ital@0;1&family=League+Script&family=Mystery+Quest&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: .5px solid red;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%; // default navegadores 16px
+
+
+  background-image: url(imgs/logoLunarteCompleto.webp);
+  background-size: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: (rgba(192, 149, 202, 0.4));
+  z-index: -1;
+}
+
+body,
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
