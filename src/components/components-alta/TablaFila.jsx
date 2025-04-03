@@ -16,21 +16,23 @@ const TablaFila = ({ producto }) => {
 
   return (
 
-    <tr>
+    <tr className="fila_producto">
       <td>{producto.nombre}</td>
       <td>${producto.precio}</td>
       <td>{producto.stock} u.</td>
-      <td>{producto.marca}</td>
-      <td>{producto.categoria}</td>
-      <td className="detalles-columna">{producto.detalles}</td>
+      <td className="columnas-ocultas">{producto.marca}</td>
+      <td className="columnas-ocultas">{producto.categoria}</td>
+      <td className="columnas-ocultas">{producto.detalles}</td>
       <td>
         <img src={producto.foto} alt={producto.nombre} />
       </td>
       <td>{producto.envio ? '✅' : '❌'}</td>
       <td>
-        <button className="boton__ver">Ver</button>
-        <button className="boton_editar" onClick={() => handleEditar(producto)}>Editar</button>
-        <button className="boton_borrar" onClick={() => handleEliminar(producto.id)}>Borrar</button>
+        <div className="acciones-container">
+          <button className="boton__ver">Ver</button>
+          <button className="boton_editar" onClick={() => handleEditar(producto)}>Editar</button>
+          <button className="boton_borrar" onClick={() => handleEliminar(producto.id)}>Borrar</button>
+        </div>
       </td>
     </tr>
 

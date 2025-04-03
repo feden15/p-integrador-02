@@ -1,7 +1,57 @@
+.fila_producto {
+    td {
+        vertical-align: middle;
+    }
+}
+
+.acciones-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.boton__ver, .boton_editar, .boton_borrar {
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    white-space: nowrap; // Para que no se parta el texto
+
+    @media (min-width: 992px) {
+        padding: 8px 12px; // Botones más grandes en desktop
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}
+
 .boton__ver {
     background-color: rgb(231, 231, 105);
-
     &:hover {
-    background-color: rgb(160, 160, 73);
+        background-color: rgb(160, 160, 73);
+    }
+}
+
+.boton_editar {
+    background-color: rgb(100, 149, 237);
+    color: white;
+    &:hover {
+        background-color: rgb(70, 119, 207);
+    }
+}
+
+.boton_borrar {
+    background-color: rgb(255, 99, 71);
+    color: white;
+    &:hover {
+        background-color: rgb(225, 69, 41);
     }
 }

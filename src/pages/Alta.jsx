@@ -8,10 +8,12 @@ const Alta = () => {
   useTitulo('Alta')
 
   return (
-    <div className="contenedor ">
-      <h1>Formulario de alta de productos</h1>
-      <Formulario/>
-      <Tabla/>
+    <div className="contenedor">
+      <h2>Formulario de alta de productos</h2>
+      <Formulario />
+      <div className="tabla-responsive-container">
+        <Tabla />
+      </div>
     </div>
   )
 }

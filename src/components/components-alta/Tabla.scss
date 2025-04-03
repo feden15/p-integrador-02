@@ -1,37 +1,82 @@
 table.tabla-alta {
     width: 100%;
     background-color: #fff;
-
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
     border-collapse: collapse;
     border-radius: 5px;
-    overflow: hidden;
+    margin: 0;
 
-    margin-top: 10px;
-
-    th {
-        padding: 10px;
-        background-color: rgb(240, 199, 243);
-        border-bottom: 1px solid #ddd;
-        text-align: center;
+    @media (max-width: 991px) {
+        min-width: 600px; // Scroll horizontal en dispositivos pequeños
     }
 
-    td {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
+    @media (min-width: 992px) {
+        width: 100% !important; // Forzamos ancho completo
+        table-layout: auto; // Permite que las celdas se expandan
+
+        th,
+        td {
+            padding: 12px 15px;
+        }
     }
 
-    img {
-        width: 60px;
-    }
-
-    .detalles-columna {
+    .columnas-ocultas {
         display: none;
 
-        @media (min-width: 768px) {
+        @media (min-width: 1300px) {
             display: table-cell;
         }
+    }
+
+    // Detalles: más espacio para el texto
+    td:nth-child(6) {
+        min-width: 250px;
+        max-width: 350px;
+    }
+
+    /* Nombre */
+    td:nth-child(1) {
+        min-width: 150px;
+    }
+
+    /* Precio */
+    td:nth-child(2) {
+        min-width: 80px;
+    }
+
+    /* Stock */
+    td:nth-child(3) {
+        min-width: 80px;
+    }
+
+    /* Foto */
+    td:nth-child(7) {
+        min-width: 100px;
+    }
+}
+
+th,
+td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(240, 199, 243);
+    position: sticky;
+    top: 0;
+}
+
+img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.tabla-grande-container {
+    @media (min-width: 992px) {
+        width: 100%;
+        margin: 0 auto;
     }
 }
