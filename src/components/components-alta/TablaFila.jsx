@@ -21,7 +21,7 @@ const TablaFila = ({ producto }) => {
       <td>{producto.stock}</td>
       <td>{producto.marca}</td>
       <td>{producto.categoria}</td>
-      <td>{producto.detalles}</td>
+      <td className="detalles-columna">{producto.detalles}</td>
       <td>
         <img src={producto.foto} alt={producto.nombre} />
       </td>
