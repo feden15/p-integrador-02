@@ -1,0 +1,63 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); // Logos redes sociales
+
+.nosotros-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #333;
+}
+
+.nosotros-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+
+.nosotros-historia {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    h2 {
+        font-family: "Charm", serif;
+        font-size: 2rem;
+        color: #b27bda;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+}
+
+.nosotros-imagen {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+

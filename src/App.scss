@@ -39,12 +39,13 @@ body,
   margin: 0;
 }
 
-.app-container {
-  flex: 1;
+.app-layout {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; // Ocupa al menos toda la altura visible
 }
 
 .main-content {
-  flex: 1;
+  flex: 1; // Hace que el contenido ocupe todo el espacio disponible
+  padding-bottom: 2rem; // Espacio antes del footer
 }

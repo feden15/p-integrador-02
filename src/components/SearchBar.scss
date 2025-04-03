@@ -5,12 +5,8 @@
     background-color: #fefefe;
 
     &__logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         width: 10rem;
-        height: 3.50rem;
+        height: 3rem;
 
         filter: saturate(2);
     }

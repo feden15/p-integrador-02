@@ -9,7 +9,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="app-container">
+      <div className="app-layout">
         <Cabecera />
         <main className="main-content">
           <Rutas />
