@@ -18,6 +18,8 @@ const ListadoCarrito = () => {
 
     const total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0)
 
+    const cantidadTotal = carrito.reduce((acc, producto) => acc + producto.cantidad, 0)
+
     return (
         <>
             <table className='tabla-carrito'>
@@ -49,7 +51,10 @@ const ListadoCarrito = () => {
 
             {carrito.length > 0 && (
                 <div className="carrito-controls">
-                    <h3>Total a pagar: $ {total.toFixed(2)}</h3>
+                    <div className="info-total">
+                        <h3>Productos: {cantidadTotal}</h3>
+                        <h3>Total a pagar: $ {total.toFixed(2)}</h3>
+                    </div>
                     <div className="botones-carrito">
                         <button className="vaciar" onClick={handleLimpiarCarrito}>Vaciar Carrito</button>
                         <button className="comprar" onClick={handleComprar}>Comprar</button>

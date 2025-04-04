@@ -145,7 +145,7 @@ const Formulario = () => {
                             name="envio"
                             checked={form.envio}
                             onChange={handleChange} />
-                        <span class="slider">SiㅤㅤNo</span>
+                        <span className="slider">SiㅤㅤNo</span>
                     </div>
 
                 </div>

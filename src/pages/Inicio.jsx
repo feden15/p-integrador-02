@@ -8,7 +8,7 @@ const Inicio = () => {
 
     useTitulo('Inicio')
 
-    const {productos} = useContext(ProductosContext)
+    const { productos } = useContext(ProductosContext)
 
     return (
         <main>

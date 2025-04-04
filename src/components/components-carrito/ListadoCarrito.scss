@@ -16,7 +16,7 @@
 
     th {
         background-color: rgb(240, 199, 243);
-        color: #1d1d1d;
+        color: #6a3093;
         font-weight: bold;
         text-align: center;
     }
@@ -41,7 +41,7 @@
         }
     }
 
-    // Mensaje cuando el carrito está vacío
+    // Mensaje cuando carrito está vacío
     tr td[colspan] {
         text-align: center;
         padding: 20px;
@@ -57,8 +57,29 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5rem;
-    padding: 0 1rem;
+    padding: 1rem;
     border-radius: 5px;
+    flex-wrap: wrap;
+
+    .info-total {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+
+        h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #6a3093;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            &:first-child {
+                background-color: rgb(240, 199, 243); // Fondo más destacado para cantidad
+            }
+        }
+    }
 
     h3 {
         color: #ffffff;
@@ -69,7 +90,7 @@
     .botones-carrito {
         display: flex;
         gap: 10px;
-        margin: 5px;
+        margin: 0;
 
         button {
             border: none;
@@ -102,5 +123,27 @@
                 background-color: rgb(70, 119, 207);
             }
         }
+    }
+
+    @media (max-width: 576px) {
+        .carrito-controls {
+            flex-direction: column;
+            gap: 1rem;
+
+            .info-total {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .botones-carrito {
+                width: 100%;
+                justify-content: space-between;
+
+                button {
+                    flex: 1;
+                }
+            }
+        }
+
     }
 }
