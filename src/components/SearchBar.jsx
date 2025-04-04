@@ -1,10 +1,17 @@
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import './SearchBar.scss'
 
 const SearchBar = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogoClick = () => {
+        navigate('/');
+    };
+
     return (
         <div className="search-bar">
-            <div className="search-bar__logo-container">
+            <div onClick={handleLogoClick} className="search-bar__logo-container">
                 <img src="imgs/logoLunarte.webp" alt="" />
             </div>
             <form action="#" className="search-bar__form-container">
