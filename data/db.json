@@ -132,5 +132,102 @@
       "foto": "imgs/porta-vasos.webp",
       "envio": false
     }
+  ],
+  "carrito": [
+    {
+      "id": "12",
+      "nombre": "Porta vasos",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decoración",
+      "detalles": "Base protectora de cerámica o yeso, diseñada para sostener vasos y evitar marcas en las superficies.",
+      "foto": "imgs/porta-vasos.webp",
+      "envio": false
+    },
+    {
+      "id": "11",
+      "nombre": "Huevera",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decoración",
+      "detalles": "Soporte funcional de cerámica o yeso diseñado para sostener huevos, ideal para desayunos y presentaciones de mesa.",
+      "foto": "imgs/huevera.webp",
+      "envio": false
+    },
+    {
+      "id": "11",
+      "nombre": "Huevera",
+      "precio": "200",
+      "stock": "20",
+      "marca": "Lunarte",
+      "categoria": "Decoración",
+      "detalles": "Soporte funcional de cerámica o yeso diseñado para sostener huevos, ideal para desayunos y presentaciones de mesa.",
+      "foto": "imgs/huevera.webp",
+      "envio": false
+    },
+    {
+      "id": "5b81",
+      "createAt": 1743783844551,
+      "cantidad": 3,
+      "carrito": [
+        {
+          "id": "3",
+          "nombre": "Huevera",
+          "precio": "200",
+          "stock": "20",
+          "marca": "Lunarte",
+          "categoria": "Decoración",
+          "detalles": "Soporte funcional de cerámica o yeso diseñado para sostener huevos, ideal para desayunos y presentaciones de mesa.",
+          "foto": "imgs/huevera.webp",
+          "envio": false,
+          "cantidad": 1
+        },
+        {
+          "id": "4",
+          "nombre": "Porta vasos",
+          "precio": "200",
+          "stock": "20",
+          "marca": "Lunarte",
+          "categoria": "Decoración",
+          "detalles": "Base protectora de cerámica o yeso, diseñada para sostener vasos y evitar marcas en las superficies.",
+          "foto": "imgs/porta-vasos.webp",
+          "envio": false,
+          "cantidad": 1
+        },
+        {
+          "id": "5",
+          "nombre": "Alhajero",
+          "precio": "100",
+          "stock": "32",
+          "marca": "Lunarte",
+          "categoria": "Decoración",
+          "detalles": "Pequeño recipiente decorativo de yeso y cerámica, ideal para guardar joyas y accesorios con estilo elegante y artesanal.",
+          "foto": "imgs/alhajero.webp",
+          "envio": true,
+          "cantidad": 1
+        }
+      ]
+    },
+    {
+      "id": "dab9",
+      "createAt": 1743783896378,
+      "cantidad": 1,
+      "carrito": [
+        {
+          "id": "5",
+          "nombre": "Alhajero",
+          "precio": "100",
+          "stock": "32",
+          "marca": "Lunarte",
+          "categoria": "Decoración",
+          "detalles": "Pequeño recipiente decorativo de yeso y cerámica, ideal para guardar joyas y accesorios con estilo elegante y artesanal.",
+          "foto": "imgs/alhajero.webp",
+          "envio": true,
+          "cantidad": 5
+        }
+      ]
+    }
   ]
 }

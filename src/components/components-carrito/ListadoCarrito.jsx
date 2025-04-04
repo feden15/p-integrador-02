@@ -9,7 +9,6 @@ const ListadoCarrito = () => {
 
     const handleComprar = () => {
         guardarCarritoBackendContext()
-        limpiarCarritoContext()
     }
 
     const handleLimpiarCarrito = () => {

@@ -6,6 +6,8 @@ const CarritoContext = createContext()
 
 const CarritoProvider = ({ children }) => {
 
+  const urlCarrito = import.meta.env.VITE_BACKEND_CARRITO
+
   const [carrito, agregarAlCarrito, eliminarDelCarrito, limpiarCarrito] = useLocalStorage("carrito", [])
 
   function elProductoEstaEnElCarrito(producto) {
