@@ -11,10 +11,10 @@ const ProductosProvider = ( { children } ) => {
     const [productoAEditar, setProductoAEditar] = useState(null)
 
     useEffect(() => {
-        getAllProductros()
+        getAllProductos()
     }, [])
 
-    const getAllProductros = async () => {
+    const getAllProductos = async () => {
 
         try {
 
