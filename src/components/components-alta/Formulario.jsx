@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import ProductosContext from "../../contexts/ProductosContext"
 import './Formulario.scss'
+import DragDrop from "./DragDrop"
 
 
 const Formulario = () => {
@@ -28,6 +29,9 @@ const Formulario = () => {
     useEffect(() => {
         productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
     }, [productoAEditar])
+
+    const [foto, setFoto] = useState('')
+    const [srcImagenBack, setSrcImagenBack] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -125,17 +129,6 @@ const Formulario = () => {
                         onChange={handleChange} />
                 </div>
                 <div className="grupo_entrada">
-                    <label htmlFor="lbl-foto">Foto</label>
-                    <input
-                        className="general_input"
-                        placeholder="URL"
-                        type="text"
-                        id="lbl-foto"
-                        name="foto"
-                        value={form.foto}
-                        onChange={handleChange} />
-                </div>
-                <div className="grupo_entrada">
                     <label htmlFor="lbl-envio">Envío</label>
                     <div className="switch">
                         <input
@@ -147,8 +140,26 @@ const Formulario = () => {
                             onChange={handleChange} />
                         <span className="slider">SiㅤㅤNo</span>
                     </div>
-
                 </div>
+                <div>
+                    <DragDrop
+                        setFoto={setFoto}
+                        srcImagenBack={srcImagenBack}
+                        setSrcImagenBack={setSrcImagenBack}
+                    />
+                </div>
+                {/* <div className="grupo_entrada">
+                    <label htmlFor="lbl-foto">Foto</label>
+                    <input
+                        className="general_input"
+                        placeholder="URL"
+                        type="text"
+                        id="lbl-foto"
+                        name="foto"
+                        value={form.foto}
+                        onChange={handleChange}
+                        />
+                </div> */}
                 <hr />
                 <div className="boton__productos">
                     <button className="boton__confirmar" type="submit">{form.id === null ? 'Guardar producto' : 'Confirmar edición'}</button>
