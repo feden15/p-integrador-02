@@ -9,7 +9,7 @@ const TablaFila = ({ producto }) => {
   const handleEditar = (producto) => {
     setProductoAEditar(producto)
   }
-  
+
   const handleEliminar = (id) => {
     eliminarProductoContext(id)
   }
@@ -24,7 +24,9 @@ const TablaFila = ({ producto }) => {
       <td className="columnas-ocultas">{producto.categoria}</td>
       <td className="columnas-ocultas">{producto.detalles}</td>
       <td>
-        <img src={producto.foto} alt={producto.nombre} />
+        {producto.foto ? (
+          <img src={producto.foto} alt={producto.nombre} />
+        ) : null}
       </td>
       <td>{producto.envio ? '✅' : '❌'}</td>
       <td>

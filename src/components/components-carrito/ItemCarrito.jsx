@@ -14,7 +14,13 @@ const ItemCarrito = ({ producto }) => {
     return (
         <tr className="item-carrito">
             <td>
-                <img src={producto.foto} alt={producto.nombre} width="50px" />
+                {producto.foto && (
+                    <img
+                        src={producto.foto}
+                        alt={producto.nombre}
+                        width="50px"
+                    />
+                )}
             </td>
             <td>{producto.nombre}</td>
             <td>{producto.cantidad}</td>

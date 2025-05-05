@@ -14,7 +14,7 @@ const Card = ({ producto }) => {
     } else {
       document.body.style.overflow = 'auto';
     }
-    
+
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -33,7 +33,13 @@ const Card = ({ producto }) => {
       <div className="card">
         <article className="card__article">
           <div className="card__image-container">
-            <img className="card__image" src={producto.foto} alt={producto.nombre} />
+            {producto.foto && (
+              <img
+                className="card__image"
+                src={producto.foto}
+                alt={producto.nombre}
+              />
+            )}
           </div>
           <div className="card__content">
             <h2 className="card__heading">{producto.nombre}</h2>
@@ -55,7 +61,13 @@ const Card = ({ producto }) => {
           <div className="card-expanded" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={toggleExpand}>×</button>
             <div className="card__image-container">
-              <img className="card__image" src={producto.foto} alt={producto.nombre} />
+              {producto.foto && (
+                <img
+                  className="card__image"
+                  src={producto.foto}
+                  alt={producto.nombre}
+                />
+              )}
             </div>
             <div className="card__content">
               <h2 className="card__heading">{producto.nombre}</h2>

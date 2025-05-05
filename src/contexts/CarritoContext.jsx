@@ -51,7 +51,6 @@ const CarritoProvider = ({ children }) => {
     try {
 
       const dataCarrito = {
-        createAt: Date.now(),
         cantidad: carrito.length,
         carrito
       }
@@ -62,6 +61,7 @@ const CarritoProvider = ({ children }) => {
         body: JSON.stringify(dataCarrito)
       }
 
+      console.log('Se realizó la compra')
       const carritoGuardado = await peticionesHttp(urlCarrito, options)
 
       limpiarCarrito()
