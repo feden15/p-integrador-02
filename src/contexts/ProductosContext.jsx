@@ -61,11 +61,11 @@ const ProductosProvider = ( { children } ) => {
                 body: JSON.stringify(productoAEditar)
             }
 
-            const urlActualizar = url + productoAEditar.id
+            const urlActualizar = url + productoAEditar._id
 
             const productoEditado = await peticionesHttp(urlActualizar, options)
 
-            const nuevoEstadoProductos = productos.map(prod => prod.id === productoEditado.id ? productoEditado : prod)
+            const nuevoEstadoProductos = productos.map(prod => prod._id === productoEditado._id ? productoEditado : prod)
 
             setProductos(nuevoEstadoProductos)
             
