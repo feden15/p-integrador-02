@@ -31,7 +31,7 @@ const ProductosProvider = ( { children } ) => {
 
         try {
 
-            delete productoNuevo.id // no nos sirve el ID que trae porque el Back crea uno nuevo
+            delete productoNuevo._id // no nos sirve el ID que trae porque el Back crea uno nuevo
 
             const options = {
                 method: 'POST',
