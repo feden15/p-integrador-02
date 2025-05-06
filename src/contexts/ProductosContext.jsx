@@ -61,11 +61,11 @@ const ProductosProvider = ( { children } ) => {
                 body: JSON.stringify(productoAEditar)
             }
 
-            const urlActualizar = url + productoAEditar._id
+            const urlActualizar = url + productoAEditar.id
 
             const productoEditado = await peticionesHttp(urlActualizar, options)
 
-            const nuevoEstadoProductos = productos.map(prod => prod._id === productoEditado._id ? productoEditado : prod)
+            const nuevoEstadoProductos = productos.map(prod => prod.id === productoEditado.id ? productoEditado : prod)
 
             setProductos(nuevoEstadoProductos)
             
@@ -75,7 +75,7 @@ const ProductosProvider = ( { children } ) => {
 
     }
 
-    const eliminarProductoContext = async (_id) => {
+    const eliminarProductoContext = async (id) => {
         
         try {
             
@@ -83,7 +83,7 @@ const ProductosProvider = ( { children } ) => {
                 method: 'DELETE'
             }
             
-            const urlEliminacion = url + _id
+            const urlEliminacion = url + id
 
             const prodEliminado = await peticionesHttp(urlEliminacion, options)
 
@@ -91,7 +91,7 @@ const ProductosProvider = ( { children } ) => {
                 return;
             }
 
-            const nuevoEstadoProductos = productos.filter(prod => prod._id !== _id)
+            const nuevoEstadoProductos = productos.filter(prod => prod.id !== id)
 
             setProductos(nuevoEstadoProductos)
             
