@@ -30,7 +30,7 @@ const Formulario = () => {
         productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
     }, [productoAEditar])
 
-    const placeHolderImagen = 'http://localhost:8080/uploads/logoLunarte.jpg'
+    const placeHolderImagen = 'http://localhost:8080/uploads/placeHolderImagen.jpg'
     const [foto, setFoto] = useState({ foto: placeHolderImagen })
     const [srcImagenBack, setSrcImagenBack] = useState(placeHolderImagen)
 
