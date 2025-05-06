@@ -30,8 +30,9 @@ const Formulario = () => {
         productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
     }, [productoAEditar])
 
-    const [foto, setFoto] = useState('http://localhost:8080/uploads/logoLunarte.jpg')
-    const [srcImagenBack, setSrcImagenBack] = useState('http://localhost:8080/uploads/logoLunarte.jpg')
+    const placeHolderImagen = 'http://localhost:8080/uploads/logoLunarte.jpg'
+    const [foto, setFoto] = useState({ foto: placeHolderImagen })
+    const [srcImagenBack, setSrcImagenBack] = useState(placeHolderImagen)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -55,6 +56,8 @@ const Formulario = () => {
     const handleReset = () => {
         setForm(formInicial)
         setProductoAEditar(null)
+        setFoto({ foto: placeHolderImagen })
+        setSrcImagenBack(placeHolderImagen)
     }
 
     return (
