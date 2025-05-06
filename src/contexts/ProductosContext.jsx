@@ -75,7 +75,7 @@ const ProductosProvider = ( { children } ) => {
 
     }
 
-    const eliminarProductoContext = async (id) => {
+    const eliminarProductoContext = async (_id) => {
         
         try {
             
@@ -91,7 +91,7 @@ const ProductosProvider = ( { children } ) => {
                 return;
             }
 
-            const nuevoEstadoProductos = productos.filter(prod => prod.id !== _id)
+            const nuevoEstadoProductos = productos.filter(prod => prod._id !== _id)
 
             setProductos(nuevoEstadoProductos)
             
