@@ -30,16 +30,18 @@ const Formulario = () => {
         productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
     }, [productoAEditar])
 
-    const [foto, setFoto] = useState('')
-    const [srcImagenBack, setSrcImagenBack] = useState('')
+    const [foto, setFoto] = useState('http://localhost:8080/uploads/logoLunarte.jpg')
+    const [srcImagenBack, setSrcImagenBack] = useState('http://localhost:8080/uploads/logoLunarte.jpg')
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         if (form.id === null) {
-            crearProductoContext(form)
+            const productoNuevoConImagen = {...form, ...foto}
+            crearProductoContext(productoNuevoConImagen)
         } else {
-            actualizarProductoContext(form)
+            const productoNuevoConImagen = {...form, ...foto}
+            actualizarProductoContext(productoNuevoConImagen)
         }
 
         handleReset()
