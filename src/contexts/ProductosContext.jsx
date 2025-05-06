@@ -83,7 +83,7 @@ const ProductosProvider = ( { children } ) => {
                 method: 'DELETE'
             }
             
-            const urlEliminacion = url + id
+            const urlEliminacion = url + _id
 
             const prodEliminado = await peticionesHttp(urlEliminacion, options)
 
@@ -91,7 +91,7 @@ const ProductosProvider = ( { children } ) => {
                 return;
             }
 
-            const nuevoEstadoProductos = productos.filter(prod => prod.id !== id)
+            const nuevoEstadoProductos = productos.filter(prod => prod.id !== _id)
 
             setProductos(nuevoEstadoProductos)
             
