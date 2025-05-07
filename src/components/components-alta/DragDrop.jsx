@@ -52,7 +52,7 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
 
             const imagenUp = await peticionesHttp(url, options)
 
-            const urlImagen = asegurarseHTTPS(imagenUp.url)
+            const urlImagen = asegurarseHTTPS(imagenUp.foto)
             setFoto({ foto: urlImagen })
 
         } catch (error) {
