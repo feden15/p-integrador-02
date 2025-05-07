@@ -5,8 +5,12 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
 
     const arrayEventosDragDrop = ['dragenter', 'dragleave', 'dragover', 'drop']
 
+    // Función que encontré en internet para cambiar los http por https y así evitar los warning que tira la consola
+    const asegurarseHTTPS = (url) => {
+        return url.replace(/^http:\/\//i, 'https://')
+    }
+
     arrayEventosDragDrop.forEach(eventName => {
-        // console.log(eventName)
         document.body.addEventListener(eventName, e => e.preventDefault())
     })
 
@@ -47,8 +51,10 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
             }
 
             const imagenUp = await peticionesHttp(url, options)
-            setFoto(imagenUp)
-            
+
+            const urlImagen = asegurarseHTTPS(imagenUp.url)
+            setFoto({ foto: urlImagen })
+
         } catch (error) {
             console.error('[uploadFile]:', error)
         }
