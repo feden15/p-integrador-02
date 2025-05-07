@@ -3,7 +3,15 @@ import { peticionesHttp } from "../helpers/peticiones-http";
 
 const ProductosContext = createContext()
 
-const ProductosProvider = ( { children } ) => {
+const ProductosProvider = ({ children }) => {
+
+    //CAMBIO
+    const asegurarseHTTPS = (url) => {
+        if (url && url.startsWith('http://')) {
+            return url.replace('http://', 'https://')
+        }
+        return url
+    }
 
     const url = import.meta.env.VITE_BACKEND_PRODUCTOS
 
@@ -14,13 +22,30 @@ const ProductosProvider = ( { children } ) => {
         getAllProductos()
     }, [])
 
+    // const getAllProductos = async () => {
+
+    //     try {
+
+    //         const prods = await peticionesHttp(url, {})
+
+    //         setProductos(prods)
+
+    //     } catch (error) {
+    //         console.error('[getAllProductos]', error)
+    //     }
+    // }
+
+    // CAMBIO
     const getAllProductos = async () => {
-
         try {
-
             const prods = await peticionesHttp(url, {})
 
-            setProductos(prods)
+            const productosConHttps = prods.map(producto => ({
+                ...producto,
+                foto: asegurarseHTTPS(producto.foto),
+            }))
+
+            setProductos(productosConHttps)
 
         } catch (error) {
             console.error('[getAllProductos]', error)
@@ -44,45 +69,74 @@ const ProductosProvider = ( { children } ) => {
             const nuevoEstadoProductos = [...productos, prods]
 
             setProductos(nuevoEstadoProductos)
-            
+
         } catch (error) {
-            console.error('[crearProductoContext]', error);            
+            console.error('[crearProductoContext]', error);
         }
 
     }
 
+    // const actualizarProductoContext = async (productoAEditar) => {
+
+    //     try {
+
+    //         const options = {
+    //             method: 'PUT',
+    //             headers: { 'content-type': 'application/json' },
+    //             body: JSON.stringify(productoAEditar)
+    //         }
+
+    //         const urlActualizar = url + productoAEditar.id
+
+    //         const productoEditado = await peticionesHttp(urlActualizar, options)
+
+    //         const nuevoEstadoProductos = productos.map(prod => prod.id === productoEditado.id ? productoEditado : prod)
+
+    //         setProductos(nuevoEstadoProductos)
+
+    //     } catch (error) {
+    //         console.error('[actualizarProductoContext]', error)
+    //     }
+
+    // }
+
+    // CAMBIO
     const actualizarProductoContext = async (productoAEditar) => {
-        
         try {
+            const productoConHttps = {
+                ...productoAEditar,
+                foto: asegurarseHTTPS(productoAEditar.foto),
+            };
 
             const options = {
                 method: 'PUT',
                 headers: { 'content-type': 'application/json' },
-                body: JSON.stringify(productoAEditar)
-            }
+                body: JSON.stringify(productoConHttps),
+            };
 
-            const urlActualizar = url + productoAEditar.id
+            const urlActualizar = url + productoConHttps.id;
 
-            const productoEditado = await peticionesHttp(urlActualizar, options)
+            const productoEditado = await peticionesHttp(urlActualizar, options);
 
-            const nuevoEstadoProductos = productos.map(prod => prod.id === productoEditado.id ? productoEditado : prod)
+            const nuevoEstadoProductos = productos.map(prod =>
+                prod.id === productoEditado.id ? productoEditado : prod
+            );
 
-            setProductos(nuevoEstadoProductos)
-            
+            setProductos(nuevoEstadoProductos);
+
         } catch (error) {
             console.error('[actualizarProductoContext]', error)
         }
-
     }
 
     const eliminarProductoContext = async (id) => {
-        
+
         try {
-            
+
             const options = {
                 method: 'DELETE'
             }
-            
+
             const urlEliminacion = url + id
 
             const prodEliminado = await peticionesHttp(urlEliminacion, options)
@@ -94,7 +148,7 @@ const ProductosProvider = ( { children } ) => {
             const nuevoEstadoProductos = productos.filter(prod => prod.id !== id)
 
             setProductos(nuevoEstadoProductos)
-            
+
         } catch (error) {
             console.error('[eliminarProductoContext]', error)
         }
