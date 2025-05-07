@@ -46,7 +46,7 @@ const ProductosProvider = ( { children } ) => {
             setProductos(nuevoEstadoProductos)
             
         } catch (error) {
-            console.errlr('[crearProductoContext]', error);            
+            console.error('[crearProductoContext]', error);            
         }
 
     }
