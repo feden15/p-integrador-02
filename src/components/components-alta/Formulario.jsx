@@ -26,8 +26,20 @@ const Formulario = () => {
 
     const [form, setForm] = useState(formInicial)
 
+    // useEffect(() => {
+    //     productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
+    // }, [productoAEditar])
+
     useEffect(() => {
-        productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
+        if (productoAEditar) {
+            setForm(productoAEditar)
+            setFoto({ foto: productoAEditar.foto })
+            setSrcImagenBack(productoAEditar.foto)
+        } else {
+            setForm(formInicial)
+            setFoto({ foto: placeHolderImagen })
+            setSrcImagenBack(placeHolderImagen)
+        }
     }, [productoAEditar])
 
     const placeHolderImagen = 'https://raw.githubusercontent.com/feden15/p-integrador-03/refs/heads/main/public/uploads/placeHolderImagen.jpg'
@@ -38,10 +50,10 @@ const Formulario = () => {
         e.preventDefault()
 
         if (form.id === null) {
-            const productoNuevoConImagen = {...form, ...foto}
+            const productoNuevoConImagen = { ...form, ...foto }
             crearProductoContext(productoNuevoConImagen)
         } else {
-            const productoNuevoConImagen = {...form, ...foto}
+            const productoNuevoConImagen = { ...form, ...foto }
             actualizarProductoContext(productoNuevoConImagen)
         }
 
@@ -149,22 +161,10 @@ const Formulario = () => {
                 <div>
                     <DragDrop
                         setFoto={setFoto}
-                        srcImagenBack={form.id === null ? srcImagenBack : form.foto}
+                        srcImagenBack={srcImagenBack}
                         setSrcImagenBack={setSrcImagenBack}
                     />
                 </div>
-                {/* <div className="grupo_entrada">
-                    <label htmlFor="lbl-foto">Foto</label>
-                    <input
-                        className="general_input"
-                        placeholder="URL"
-                        type="text"
-                        id="lbl-foto"
-                        name="foto"
-                        value={form.foto}
-                        onChange={handleChange}
-                        />
-                </div> */}
                 <hr />
                 <div className="boton__productos">
                     <button className="boton__confirmar" type="submit">{form.id === null ? 'Guardar producto' : 'Confirmar edición'}</button>
