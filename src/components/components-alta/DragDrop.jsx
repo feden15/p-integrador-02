@@ -15,7 +15,6 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
     })
 
     const handleDrop = (e) => {
-        // console.log(e)
         const files = e.dataTransfer.files
         handleFiles(files)
     }
@@ -28,7 +27,6 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
     }
 
     const handleFiles = async (files) => {
-        // console.log('Recibí los files', files)
         const file = files[0]
         await uploadFile(file)
         previewFile(file)
@@ -36,7 +34,6 @@ const DragDrop = ({ setFoto, srcImagenBack, setSrcImagenBack }) => {
 
     const uploadFile = async (file) => {
         console.log('Llegó a upload', file)
-        //const url = 'http://localhost:8080/api/v1/uploads'
         const url = import.meta.env.VITE_BACKEND_UPLOAD
 
         try {
