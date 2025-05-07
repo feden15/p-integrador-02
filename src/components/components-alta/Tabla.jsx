@@ -28,13 +28,16 @@ const Tabla = () => {
         <tbody>
           {
             productos && productos.map((producto) => (
-              <TablaFila producto={producto} key={producto.id} />
+              <TablaFila
+                producto={producto}
+                key={producto.id}
+                onVer={() => setProductoSeleccionado(producto)}
+              />
             ))
           }
         </tbody>
       </table>
 
-      {/* Modal fuera de la tabla */}
       {productoSeleccionado && (
         <div className="modal">
           <div className="modal-contenido">
