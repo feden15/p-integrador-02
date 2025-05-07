@@ -43,8 +43,23 @@ const Formulario = () => {
     const [srcImagenBack, setSrcImagenBack] = useState(placeHolderImagen)
 
     const handleSubmit = (e) => {
-        debugger
+
         e.preventDefault()
+
+        const nuevosErrores = {}
+
+        if (!form.nombre.trim()) {
+            nuevosErrores.nombre = 'El nombre es obligatorio'
+        }
+
+        if (!form.precio.trim()) {
+            nuevosErrores.precio = 'El precio es obligatorio'
+        }
+
+        if (Object.keys(nuevosErrores).length > 0) {
+            setErrores(nuevosErrores)
+            return
+        }
 
         if (form.id === null) {
             const productoNuevoConImagen = { ...form, ...foto }
@@ -60,6 +75,10 @@ const Formulario = () => {
     const handleChange = (e) => {
         const { type, name, checked, value } = e.target
         setForm({ ...form, [name]: type === 'checkbox' ? checked : value })
+
+        if (errores[name]) {
+            setErrores({ ...errores, [name]: '' })
+        }
     }
 
     const handleReset = () => {
@@ -85,7 +104,9 @@ const Formulario = () => {
                         id="lbl-nombre"
                         name="nombre"
                         value={form.nombre}
-                        onChange={handleChange} />
+                        onChange={handleChange}
+                        required />
+                    {errores.nombre && <p className="error-texto">{errores.nombre}</p>}
                 </div>
                 <div className="grupo_entrada">
                     <label htmlFor="lbl-precio">Precio</label>
@@ -96,7 +117,9 @@ const Formulario = () => {
                         id="lbl-precio"
                         name="precio"
                         value={form.precio}
-                        onChange={handleChange} />
+                        onChange={handleChange}
+                        required />
+                    {errores.nombre && <p className="error-texto">{errores.nombre}</p>}
                 </div>
                 <div className="grupo_entrada">
                     <label htmlFor="lbl-stock">Stock</label>
