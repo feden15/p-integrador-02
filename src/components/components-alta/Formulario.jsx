@@ -97,7 +97,7 @@ const Formulario = () => {
                 <h3>{form.id === null ? 'Agregar un producto' : 'Editar un producto'}</h3>
 
                 <div className="grupo_entrada">
-                    <label htmlFor="lbl-nombre">Nombre</label>
+                    <label htmlFor="lbl-nombre">Nombre*</label>
                     <input
                         className="general_input"
                         placeholder="Alhajero"
@@ -105,12 +105,11 @@ const Formulario = () => {
                         id="lbl-nombre"
                         name="nombre"
                         value={form.nombre}
-                        onChange={handleChange}
-                        required />
+                        onChange={handleChange} />
                     {errores.nombre && <p className="error-texto">{errores.nombre}</p>}
                 </div>
                 <div className="grupo_entrada">
-                    <label htmlFor="lbl-precio">Precio</label>
+                    <label htmlFor="lbl-precio">Precio*</label>
                     <input
                         className="general_input"
                         placeholder="$ 100"
@@ -118,8 +117,7 @@ const Formulario = () => {
                         id="lbl-precio"
                         name="precio"
                         value={form.precio}
-                        onChange={handleChange}
-                        required />
+                        onChange={handleChange} />
                     {errores.nombre && <p className="error-texto">{errores.nombre}</p>}
                 </div>
                 <div className="grupo_entrada">
