@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import useContext from "react"
 import TablaFila from "./TablaFila"
 import ProductosContext from "../../contexts/ProductosContext"
 import './Tabla.scss'
@@ -6,8 +6,6 @@ import './Tabla.scss'
 const Tabla = () => {
 
   const { productos } = useContext(ProductosContext)
-
-  const [productoSeleccionado, setProductoSeleccionado] = useState(null)
 
   return (
     <div className="tabla-grande-container">
@@ -31,29 +29,11 @@ const Tabla = () => {
               <TablaFila
                 producto={producto}
                 key={producto.id}
-                onVer={() => setProductoSeleccionado(producto)}
               />
             ))
           }
         </tbody>
       </table>
-
-      {productoSeleccionado && (
-        <div className="modal">
-          <div className="modal-contenido">
-            <h3>{productoSeleccionado.nombre}</h3>
-            <p><strong>Marca:</strong> {productoSeleccionado.marca}</p>
-            <p><strong>Precio:</strong> ${productoSeleccionado.precio}</p>
-            <p><strong>Stock:</strong> {productoSeleccionado.stock} unidades</p>
-            <p><strong>Detalles:</strong> {productoSeleccionado.detalles}</p>
-            <p><strong>Categoría:</strong> {productoSeleccionado.categoria}</p>
-            {productoSeleccionado.foto && (
-              <img src={productoSeleccionado.foto} alt={productoSeleccionado.nombre} />
-            )}
-            <button onClick={() => setProductoSeleccionado(null)}>Cerrar</button>
-          </div>
-        </div>
-      )}
     </div>
   )
 }

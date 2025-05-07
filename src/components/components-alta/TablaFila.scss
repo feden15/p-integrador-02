@@ -8,13 +8,15 @@
     display: flex;
     justify-content: center;
     gap: 5px;
-    
+
     @media (max-width: 767px) {
         flex-direction: column;
     }
 }
 
-.boton__ver, .boton_editar, .boton_borrar {
+.boton__ver,
+.boton_editar,
+.boton_borrar {
     border: none;
     border-radius: 4px;
     padding: 6px 10px;
@@ -35,6 +37,7 @@
 
 .boton__ver {
     background-color: rgb(231, 231, 105);
+
     &:hover {
         background-color: rgb(160, 160, 73);
     }
@@ -43,6 +46,7 @@
 .boton_editar {
     background-color: rgb(100, 149, 237);
     color: white;
+
     &:hover {
         background-color: rgb(70, 119, 207);
     }
@@ -51,7 +55,41 @@
 .boton_borrar {
     background-color: rgb(255, 99, 71);
     color: white;
+
     &:hover {
         background-color: rgb(225, 69, 41);
     }
+}
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-contenido img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 1rem;
+    border-radius: 8px;
 }
