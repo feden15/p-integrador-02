@@ -41,26 +41,10 @@ const Formulario = () => {
     const placeHolderImagen = 'https://p-integrador-03.onrender.com/uploads/placeHolderImagen.jpg'
     const [foto, setFoto] = useState({ foto: placeHolderImagen })
     const [srcImagenBack, setSrcImagenBack] = useState(placeHolderImagen)
-    const [errores, setErrores] = useState({})
 
     const handleSubmit = (e) => {
 
         e.preventDefault()
-
-        const nuevosErrores = {}
-
-        if (!form.nombre.trim()) {
-            nuevosErrores.nombre = 'El nombre es obligatorio'
-        }
-
-        if (!form.precio.trim()) {
-            nuevosErrores.precio = 'El precio es obligatorio'
-        }
-
-        if (Object.keys(nuevosErrores).length > 0) {
-            setErrores(nuevosErrores)
-            return
-        }
 
         if (form.id === null) {
             const productoNuevoConImagen = { ...form, ...foto }
@@ -105,8 +89,8 @@ const Formulario = () => {
                         id="lbl-nombre"
                         name="nombre"
                         value={form.nombre}
-                        onChange={handleChange} />
-                    {errores.nombre && <p className="error-texto">{errores.nombre}</p>}
+                        onChange={handleChange}
+                        required />
                 </div>
                 <div className="grupo_entrada">
                     <label htmlFor="lbl-precio">Precio*</label>
@@ -117,8 +101,8 @@ const Formulario = () => {
                         id="lbl-precio"
                         name="precio"
                         value={form.precio}
-                        onChange={handleChange} />
-                    {errores.precio && <p className="error-texto">{errores.precio}</p>}
+                        onChange={handleChange}
+                        required />
                 </div>
                 <div className="grupo_entrada">
                     <label htmlFor="lbl-stock">Stock</label>
