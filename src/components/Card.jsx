@@ -25,7 +25,7 @@ const Card = ({ producto }) => {
   };
 
   const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
+    setIsExpanded(!isExpanded)
   };
 
   return (

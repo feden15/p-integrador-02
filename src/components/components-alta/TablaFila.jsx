@@ -1,8 +1,8 @@
-import { useContext } from "react"
+import useContext from "react"
 import ProductosContext from "../../contexts/ProductosContext"
 import './TablaFila.scss'
 
-const TablaFila = ({ producto }) => {
+const TablaFila = ({ producto, onVer }) => {
 
   const { eliminarProductoContext, setProductoAEditar } = useContext(ProductosContext)
 
@@ -31,7 +31,7 @@ const TablaFila = ({ producto }) => {
       <td>{producto.envio ? '✅' : '❌'}</td>
       <td>
         <div className="acciones-container">
-          <button className="boton__ver">Ver</button>
+          <button className="boton__ver" onClick={onVer}>Ver</button>
           <button className="boton_editar" onClick={() => handleEditar(producto)}>Editar</button>
           <button className="boton_borrar" onClick={() => handleEliminar(producto.id)}>Borrar</button>
         </div>
