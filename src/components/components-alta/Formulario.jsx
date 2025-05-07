@@ -150,7 +150,7 @@ const Formulario = () => {
                     <DragDrop
                         setFoto={form.id === null ? setFoto : form.foto}
                         srcImagenBack={form.id === null ? srcImagenBack : form.foto}
-                        setSrcImagenBack={form.id === null ? setSrcImagenBack : form.foto}
+                        setSrcImagenBack={setSrcImagenBack}
                     />
                 </div>
                 {/* <div className="grupo_entrada">
