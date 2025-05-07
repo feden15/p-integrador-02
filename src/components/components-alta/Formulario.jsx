@@ -41,6 +41,7 @@ const Formulario = () => {
     const placeHolderImagen = 'https://p-integrador-03.onrender.com/uploads/placeHolderImagen.jpg'
     const [foto, setFoto] = useState({ foto: placeHolderImagen })
     const [srcImagenBack, setSrcImagenBack] = useState(placeHolderImagen)
+    const [errores, setErrores] = useState({})
 
     const handleSubmit = (e) => {
 
