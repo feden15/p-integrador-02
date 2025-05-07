@@ -1,4 +1,4 @@
-import useContext from "react"
+import { useContext } from "react"
 import TablaFila from "./TablaFila"
 import ProductosContext from "../../contexts/ProductosContext"
 import './Tabla.scss'

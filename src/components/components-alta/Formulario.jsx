@@ -26,10 +26,6 @@ const Formulario = () => {
 
     const [form, setForm] = useState(formInicial)
 
-    // useEffect(() => {
-    //     productoAEditar ? setForm(productoAEditar) : setForm(formInicial)
-    // }, [productoAEditar])
-
     useEffect(() => {
         if (productoAEditar) {
             setForm(productoAEditar)
