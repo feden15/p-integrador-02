@@ -118,7 +118,7 @@ const Formulario = () => {
                         name="precio"
                         value={form.precio}
                         onChange={handleChange} />
-                    {errores.nombre && <p className="error-texto">{errores.nombre}</p>}
+                    {errores.precio && <p className="error-texto">{errores.precio}</p>}
                 </div>
                 <div className="grupo_entrada">
                     <label htmlFor="lbl-stock">Stock</label>
