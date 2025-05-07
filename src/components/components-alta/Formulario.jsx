@@ -43,6 +43,7 @@ const Formulario = () => {
     const [srcImagenBack, setSrcImagenBack] = useState(placeHolderImagen)
 
     const handleSubmit = (e) => {
+        debugger
         e.preventDefault()
 
         if (form.id === null) {
