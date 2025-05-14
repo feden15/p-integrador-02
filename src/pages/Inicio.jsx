@@ -12,12 +12,9 @@ const Inicio = () => {
 
     return (
         <main>
-            <section className="section-cards">
-                <header className="section-cards__header">
-                    <h1>lunarte</h1>
-                    <p>Se encontraron 8 productos</p>
-                </header>
-            </section>
+            <header className="section-cards__header">
+                <h1>lunarte</h1>
+            </header>
 
             <section className="cards-container" id="container-productos">
                 {

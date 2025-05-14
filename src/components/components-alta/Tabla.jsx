@@ -8,17 +8,17 @@ const Tabla = () => {
   const { productos } = useContext(ProductosContext)
 
   return (
-    <div className="tabla-grande-container">
+    <div className="tabla-container">
       <table className="tabla-alta">
         <thead>
           <tr>
             <th>Nombre</th>
             <th>Precio</th>
             <th>Stock</th>
-            <th className="columnas-ocultas">Marca</th>
-            <th className="columnas-ocultas">Categoría</th>
-            <th className="columnas-ocultas">Detalles</th>
-            <th>Foto</th>
+            <th className="columnas-ocultas2">Marca</th>
+            <th className="columnas-ocultas2">Categoría</th>
+            {/* <th className="columnas-ocultas2">Detalles</th> */}
+            <th className="columnas-ocultas1">Foto</th>
             <th>Envío</th>
             <th>Acciones</th>
           </tr>

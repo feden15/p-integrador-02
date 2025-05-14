@@ -2,26 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
 
 .carrito-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    width: 90%;
+    margin: auto;
+    padding-top: 3rem;
     box-sizing: border-box;
 
-    h1 {
+    h2 {
+        justify-self: center;
         font-family: "Charm", serif;
         font-weight: bold;
         font-size: 40px;
         letter-spacing: 5px;
-        color: #ffffff;
-        text-align: center;
-        margin-bottom: 1rem;
+        color: rgba(0, 0, 0, 0.6);
     }
 
-    hr {
-        border: none;
-        height: 1px;
-        background-color: rgba(255, 255, 255, 0.3);
-        margin: 1rem 0;
+    @media (min-width: 616px) {
+        padding-top: 5rem;
+    }
+
+    @media (min-width: 936px) {
+        padding-top: 3rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

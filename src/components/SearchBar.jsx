@@ -1,6 +1,9 @@
 import { Link, useNavigate } from 'react-router'
 import './SearchBar.scss'
 
+import NavItem from './NavItem'
+import menuItems from '../constants/menuItems'
+
 const SearchBar = () => {
 
     const navigate = useNavigate();
@@ -12,11 +15,22 @@ const SearchBar = () => {
     return (
         <div className="search-bar">
             <div onClick={handleLogoClick} className="search-bar__logo-container">
-                <img src="imgs/logoLunarte.webp" alt="" />
+                <img src="imgs/logoLunarteSinFondo.webp" alt="" />
+            </div>
+            <div>
+                <nav className="nav-bar">
+                    <ul className="nav-bar__nav-list">
+                        {
+                            menuItems.map((item) => (
+                                <NavItem item={item} key={item.id} />
+                            ))
+                        }
+                    </ul>
+                </nav>
             </div>
             <form action="#" className="search-bar__form-container">
                 <label htmlFor="busqueda" className="search-bar__form-label">Buscar</label>
-                <input type="search" id="busqueda" className="search-bar__form-search" />
+                <input type="search" id="busqueda" className="search-bar__form-search" placeholder='Buscar'/>
                 <button type="submit" className="search-bar__form-submit">Buscar</button>
             </form>
             <div className="search-bar__carrito-container">

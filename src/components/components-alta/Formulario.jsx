@@ -78,7 +78,7 @@ const Formulario = () => {
 
             <form className="form__productos" onSubmit={handleSubmit}>
 
-                <h3>{form.id === null ? 'Agregar un producto' : 'Editar un producto'}</h3>
+                <h3>{form.id === null ? 'Carga un producto' : 'Edita el producto'}</h3>
 
                 <div className="grupo_entrada">
                     <label htmlFor="lbl-nombre">Nombre*</label>

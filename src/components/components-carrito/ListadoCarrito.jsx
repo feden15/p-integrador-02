@@ -52,7 +52,7 @@ const ListadoCarrito = () => {
                 <div className="carrito-controls">
                     <div className="info-total">
                         <h3>Productos: {cantidadTotal}</h3>
-                        <h3>Total a pagar: $ {total.toFixed(2)}</h3>
+                        <h3>Total: $ {total.toFixed(2)}</h3>
                     </div>
                     <div className="botones-carrito">
                         <button className="vaciar" onClick={handleLimpiarCarrito}>Vaciar Carrito</button>

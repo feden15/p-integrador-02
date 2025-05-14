@@ -1,10 +1,27 @@
 .contacto-container {
-    flex: 1; // Esto es clave para el sticky footer
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+    width: 90%;
+    padding-top: 4rem;
+    box-sizing: border-box;
+    margin: auto;
+
+    p {
+        text-align: center;
+        color: #333;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 616px) {
+        padding-top: 6rem;
+    }
+
+    @media (min-width: 936px) {
+        padding-top: 4rem;
+    }
+
+    @media (min-width: 1200px) {
+        width: 100%;
+    }
 }
 
 .contacto-contenido {
@@ -13,20 +30,13 @@
     flex-direction: column;
     gap: 2rem;
 
-    h1 {
+    h2 {
+        align-self: center;
         font-family: "Charm", serif;
-        font-size: 2.5rem;
-        color: #6a3093;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        text-align: center;
-        color: #333;
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto 2rem;
+        font-weight: bold;
+        font-size: 50px;
+        letter-spacing: 5px;
+        color: rgba(0, 0, 0, 0.6);
     }
 }
 
@@ -36,7 +46,7 @@
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: auto; // Empuja el contenido hacia arriba
+    margin-top: auto;
 
     h3 {
         font-family: "Charm", serif;
@@ -46,7 +56,6 @@
     }
 }
 
-// Mantén los estilos existentes para .redes-sociales y .red-social
 .redes-sociales {
     display: flex;
     flex-direction: column;
@@ -80,5 +89,28 @@
 
     i {
         font-size: 1.2rem;
+    }
+}
+
+.contacto-mapa {
+    background-color: rgb(240, 199, 243);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+
+    .mapa-responsive {
+
+        width: 80%;
+        height: 200px;
+        border: none;
+        border-radius: 5px;
+
+        @media (min-width: 768px) {
+            height: 500px;
+            border: none;
+            border-radius: 5px;
+        }
     }
 }

@@ -9,7 +9,7 @@ const Alta = () => {
 
   return (
     <div className="contenedor">
-      <h2>Formulario de alta de productos</h2>
+      <h2>alhacena</h2>
       <Formulario />
       <div className="tabla-responsive-container">
         <Tabla />

@@ -15,9 +15,13 @@ body {
 
   background-image: url(imgs/logoLunarteCompleto.webp);
   background-size: auto;
-  background-position: center center;
+  background-position: center -15rem;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @media screen and (min-width: 616px) {
+    background-position: center -10rem;
+  }
 }
 
 body::before {
@@ -25,18 +29,19 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: (rgba(192, 149, 202, 0.4));
   z-index: -1;
 }
 
 body,
 #root {
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .app-layout {
@@ -48,4 +53,14 @@ body,
 .main-content {
   flex: 1; // Hace que el contenido ocupe todo el espacio disponible
   padding-bottom: 2rem; // Espacio antes del footer
+
+  @media screen and (min-width: 1200px) {
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 1700px) {
+    max-width: 60vw;
+    margin: auto;
+  }
 }

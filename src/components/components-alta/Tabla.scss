@@ -1,28 +1,51 @@
-table.tabla-alta {
+.tabla-container {
+    width: 100%;
+    margin: auto;
+}
+
+th,
+td {
+    padding: 5px 5px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    width: min-content;
+}
+
+th {
+    background-color: rgb(240, 199, 243);
+    position: sticky;
+    top: 0;
+}
+
+img {
+    width: 80px;
+    height: auto;
+}
+
+.tabla-alta {
     width: 100%;
     background-color: #fff;
     border-collapse: collapse;
     border-radius: 5px;
     margin: 0;
 
-    @media (max-width: 991px) {
-        min-width: 600px; // Scroll horizontal en dispositivos pequeños
-    }
+    .columnas-ocultas1 {
+        display: none;
 
-    @media (min-width: 992px) {
-        width: 100% !important; // Forzamos ancho completo
-        table-layout: auto; // Permite que las celdas se expandan
-
-        th,
-        td {
-            padding: 12px 15px;
+        @media (min-width: 936px) {
+            display: table-cell;
+            width: min-content;
+            padding: 0;
         }
     }
 
-    .columnas-ocultas {
+    .columnas-ocultas2 {
         display: none;
 
-        @media (min-width: 1300px) {
+        @media (min-width: 1200px) {
             display: table-cell;
         }
     }
@@ -35,7 +58,7 @@ table.tabla-alta {
 
     /* Nombre */
     td:nth-child(1) {
-        min-width: 150px;
+        min-width: 80px;
     }
 
     /* Precio */
@@ -45,38 +68,11 @@ table.tabla-alta {
 
     /* Stock */
     td:nth-child(3) {
-        min-width: 80px;
+        min-width: 20px;
     }
 
     /* Foto */
     td:nth-child(7) {
-        min-width: 100px;
-    }
-}
-
-th,
-td {
-    padding: 10px 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: rgb(240, 199, 243);
-    position: sticky;
-    top: 0;
-}
-
-img {
-    width: 80px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.tabla-grande-container {
-    @media (min-width: 992px) {
-        width: 100%;
-        margin: 0 auto;
+        width: min-content;
     }
 }

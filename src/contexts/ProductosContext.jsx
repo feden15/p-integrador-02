@@ -21,21 +21,7 @@ const ProductosProvider = ({ children }) => {
     useEffect(() => {
         getAllProductos()
     }, [])
-
-    // const getAllProductos = async () => {
-
-    //     try {
-
-    //         const prods = await peticionesHttp(url, {})
-
-    //         setProductos(prods)
-
-    //     } catch (error) {
-    //         console.error('[getAllProductos]', error)
-    //     }
-    // }
-
-    // CAMBIO
+    
     const getAllProductos = async () => {
         try {
             const prods = await peticionesHttp(url, {})

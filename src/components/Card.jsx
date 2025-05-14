@@ -46,10 +46,16 @@ const Card = ({ producto }) => {
             <div className="card__description">
               <p>{producto.detalles.substring(0, 50)}...</p>
             </div>
-            <button className='card__button card__button--details' onClick={toggleExpand}>
+            <button
+              className="card__button card__button--details"
+              onClick={toggleExpand}
+            >
               Ver detalles
             </button>
-            <button className='card__button' onClick={() => handleAgregar(producto)}>
+            <button
+              className="card__button"
+              onClick={() => handleAgregar(producto)}
+            >
               Agregar al carrito
             </button>
           </div>
@@ -58,28 +64,28 @@ const Card = ({ producto }) => {
 
       {isExpanded && (
         <div className="modal-overlay" onClick={toggleExpand}>
-          <div className="card-expanded" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-expanded" onClick={(e) => e.stopPropagation()}>
             <button className="close-button" onClick={toggleExpand}>×</button>
-            <div className="card__image-container">
+            <div className="modal__image-container">
               {producto.foto && (
                 <img
-                  className="card__image"
+                  className="modal__image"
                   src={producto.foto}
                   alt={producto.nombre}
                 />
               )}
             </div>
-            <div className="card__content">
-              <h2 className="card__heading">{producto.nombre}</h2>
-              <div className="card__description__modal">
-                <p><strong>Precio:</strong> ${producto.precio}</p>
+            <div className="modal__content">
+              <h2 className="modal__heading">{producto.nombre}</h2>
+              <div className="modal__description">
+                <p>{producto.detalles}</p>
                 <p><strong>Marca:</strong> {producto.marca}</p>
                 <p><strong>Categoría:</strong> {producto.categoria}</p>
-                <p><strong>Detalles completos:</strong> {producto.detalles}</p>
                 <p><strong>Envío:</strong> {producto.envio ? 'Disponible' : 'No disponible'}</p>
+                <p><strong>Precio:</strong> ${producto.precio}</p>
               </div>
               <button
-                className="card__buttons-container"
+                className="modal__buttons-container"
                 onClick={() => {
                   handleAgregar(producto);
                   toggleExpand();

@@ -8,8 +8,7 @@ const Carrito = () => {
 
   return (
     <div className="carrito-container">
-      <h1>Productos del carrito</h1>
-      <hr />
+      <h2>tu carrito</h2>
       <ListadoCarrito />
     </div>
   )

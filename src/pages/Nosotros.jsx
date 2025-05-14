@@ -7,8 +7,8 @@ const Nosotros = () => {
   return (
     <div className="nosotros-container">
       <section className="nosotros-main">
+        <h2>nuestra historia</h2>
         <article className="nosotros-historia">
-          <h2>Nuestra Historia</h2>
           <p>
             Lunarte comenzó como un pequeño emprendimiento familiar en 2015, cuando María, nuestra fundadora,
             empezó a crear piezas únicas de decoración en el garage de su casa. Lo que comenzó como un pasatiempo

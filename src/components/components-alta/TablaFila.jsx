@@ -32,10 +32,10 @@ const TablaFila = ({ producto }) => {
         <td>{producto.nombre}</td>
         <td>${producto.precio}</td>
         <td>{producto.stock} u.</td>
-        <td className="columnas-ocultas">{producto.marca}</td>
-        <td className="columnas-ocultas">{producto.categoria}</td>
-        <td className="columnas-ocultas">{producto.detalles}</td>
-        <td>
+        <td className="columnas-ocultas2">{producto.marca}</td>
+        <td className="columnas-ocultas2">{producto.categoria}</td>
+        {/* <td className="columnas-ocultas2">{producto.detalles}</td> */}
+        <td className="columnas-ocultas1">
           {producto.foto && <img src={producto.foto} alt={producto.nombre} />}
         </td>
         <td>{producto.envio ? '✅' : '❌'}</td>

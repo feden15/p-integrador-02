@@ -1,73 +1,31 @@
-/* ----------------------------------------------- */
-/* HEADER                                          */
-/* ----------------------------------------------- */
-/* MOBILE FIRST */
 .main-header {
-    display: flex;
-    flex-direction: column-reverse;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-    @media screen and (min-width: 992px) {
-        & {
-            flex-direction: column;
-        }
-    }
-}
+  display: flex;
+  flex-direction: column-reverse;
 
-#menu {
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+
+  transition: background-color 0.3s ease;
+
+  #menu {
     display: none;
 
-    /* Hacer funcionar el checkbox -> Hacer funcionar el menú hamburgüesa */
-
-    &:checked + .nav-bar {
-        display: block;
+    &:checked+.nav-bar {
+      display: block;
+      height: 100vh;
     }
-}
+  }
 
-/* ----------------------------------------------- */
-/* MENÚ TOOGLE                                     */
-/* ----------------------------------------------- */
-
-.menu-toogle {
-    display: block;
-
-    flex: 0 0 3rem;
-    position: relative;
-    cursor: pointer; /* manito */
-
-    &__label { /* .menu-toogle__label */
-        display: block;
-        background-color: #fefefe;
-        height: 100%;
-    }
-
-    &__top-bread, /* .menu-toogle__top-bread */
-    &__meat, /* .menu-toogle__top-bread */
-    &__bottom-bread { /* .menu-toogle__top-bread */
-        displaY: block;
-        background-color: #d193cb;
-        height: .4rem;
-        position: absolute;
-        left: .5rem;
-        right: .5rem;
-    }
-
-    &__top-bread {
-        top: .8rem;
-    }
-
-    &__meat { /* Centrar sin usar flexbox */
-        top: 50%; /* centrando verticalmente */
-        margin-top: -.2rem;
-    }
-
-    &__bottom-bread {
-        bottom: .8rem;
-    }
-
-    @media screen and (min-width: 992px) {
-        & {
-            display: none; /* oculta el menú */
-        }        
-    }
-
+  @media screen and (min-width: 616px) {
+    align-items: center;
+  }
 }
